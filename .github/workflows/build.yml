@@ -101,4 +101,3 @@ jobs:
           ./**/bin/aseprite/*
           ./**/bin/*
           ./**/build/bin/*
-
