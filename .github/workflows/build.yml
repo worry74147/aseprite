@@ -96,4 +96,7 @@ jobs:
       uses: actions/upload-artifact@v4.5.0
       with:
         name: result-artifact
-        path: ./**/build/bin/aseprite/*
+        path: |
+          ./**/build/bin/aseprite/*
+          ./**/bin/aseprite/*
+
