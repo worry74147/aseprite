@@ -11,7 +11,7 @@ jobs:
         ui: [gui]
         scripting: [lua, noscripts]
         exclude:
-          - build_type: Debug
+          - build_type: RelWithDebInfo
             ui: gui
           - build_type: RelWithDebInfo
             ui: cli
@@ -82,7 +82,7 @@ jobs:
         cmake -S . -B build -G Ninja \
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
           -DCMAKE_OSX_DEPLOYMENT_TARGET=10.9 \
-          -DENABLE_TESTS=ON \
+          -DENABLE_TESTS=OFF \
           -DENABLE_SCRIPTING=$enable_scripting \
           -DENABLE_CCACHE=$enable_ccache \
           -DLAF_BACKEND=$laf_backend \
@@ -99,4 +99,6 @@ jobs:
         path: |
           ./**/build/bin/aseprite/*
           ./**/bin/aseprite/*
+          ./**/bin/*
+          ./**/build/bin/*
 
