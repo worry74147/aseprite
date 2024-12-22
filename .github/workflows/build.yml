@@ -11,7 +11,7 @@ jobs:
         ui: [gui]
         scripting: [lua, noscripts]
         exclude:
-          - build_type: RelWithDebInfo
+          - build_type: Debug
             ui: gui
           - build_type: RelWithDebInfo
             ui: cli
